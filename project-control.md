@@ -1,10 +1,13 @@
 # Project Control Board — falloutday
 
 - **Project:** falloutday
-- **Status:** BASELINE_CREATED / CONTENT_AND_QA_RUNNING
+- **Status:** LIVE_BASELINE / CONTENT_AND_QA_RUNNING
 - **Repository:** https://github.com/ZifanWang1996/falloutday
-- **Baseline commit:** `e2f7d2f4b580fc43dced6bfba17c740b8c0243e1`
-- **Production replacement:** explicitly not performed; remains owner-gated
+- **Baseline commit:** `dd984725d21d9f27d694fc5826689541213ecee0`
+- **Production deployment:** `https://falloutday-6uzau2koi-zifanwang1996s-projects.vercel.app`
+- **Production URLs:** `https://falloutday.online` and `https://www.falloutday.online`
+- **Deployment evidence — 2026-07-12:** Vercel deployment `dpl_DPYPkH7vW8RYpTUu6c9kkAMA3mFe` is READY. Both production URLs returned HTTPS 200 and independently rendered the FalloutDay heading, navigation, CTAs, guide cards, and fan-commentary footer.
+- **Production replacement:** complete for the initial safe homepage baseline; content/legal/SEO expansion remains required before ads.
 - **Type:** Non-official Fallout fan commentary and guide site
 - **Monetization:** Advertising — disabled until editorial, legal-disclosure, UX, and production QA gates pass
 - **Launch target:** ASAP
