@@ -1,45 +1,42 @@
-# Project Control Board — falloutday
+# Project Control Board — FalloutDay
 
-- **Project:** falloutday
-- **Status:** LIVE_BASELINE / CONTENT_AND_QA_RUNNING
+- **Project:** FalloutDay
+- **Status:** `PAUSED_AT_OWNER_REQUEST / LIVE_AND_MONITORED`
+- **Domain:** https://falloutday.online/
 - **Repository:** https://github.com/ZifanWang1996/falloutday
-- **Baseline commit:** `dd984725d21d9f27d694fc5826689541213ecee0`
-- **Production deployment:** `https://falloutday-6uzau2koi-zifanwang1996s-projects.vercel.app`
-- **Production URLs:** `https://falloutday.online` and `https://www.falloutday.online`
-- **Deployment evidence — 2026-07-12:** Vercel deployment `dpl_DPYPkH7vW8RYpTUu6c9kkAMA3mFe` is READY. Both production URLs returned HTTPS 200 and independently rendered the FalloutDay heading, navigation, CTAs, guide cards, and fan-commentary footer.
-- **Production replacement:** complete for the initial safe homepage baseline; content/legal/SEO expansion remains required before ads.
-- **Type:** Non-official Fallout fan commentary and guide site
-- **Monetization:** Advertising — disabled until editorial, legal-disclosure, UX, and production QA gates pass
-- **Launch target:** ASAP
-- **Source of truth:** this file + `stage-dag.md` + `kanban-plan.md`
+- **Branch / latest verified commit:** `main` / `2f892b4414946b9faa4d5e9868d8d78ed209f16f`
+- **Site type:** independent US-English Fallout 76 fan commentary and guide site
+- **Monetization:** one controlled, labelled EffectiveCPM post-content trial placement
+- **Source of truth:** `PROJECT_HANDOFF.md` plus this file
 
-## Confirmed facts
-- **Domain:** `falloutday.online`
-- **Editorial scope:** Fallout player guides and news commentary, including Fallout 76 builds and general tips.
-- **Rights position:** fan commentary; no claimed official licence.
-- **Live-site observation — 2026-07-12 UTC:** `https://falloutday.online` redirects to `https://www.falloutday.online/`; the responding host reports `server: Vercel` and `x-powered-by: Next.js`.
-- **Live content observation — 2026-07-12 UTC:** homepage currently presents unrelated `Nano Banana Pro` / `ShipAny` AI-image-product template content. It is not a Fallout content site.
-- **DNS observation — 2026-07-12 UTC:** apex A record returned `216.198.79.1`; authoritative NS returned `launch1.spaceship.net` and `launch2.spaceship.net`. This is not evidence that a source repository is available or that a safe production replacement is authorized.
-- A local project/source folder named `falloutday` was not found before the project-control documents were created.
+## Current verified production state — 2026-07-12 UTC
 
-## Immediate product position (working draft)
-`FalloutDay` will be positioned as an independent, fan-run editorial resource for practical Fallout 76 build guides, beginner tips, and clearly sourced news commentary for US-English players. It must never imply affiliation with Bethesda, Microsoft, or any official Fallout publisher.
+- `https://falloutday.online/` is live over HTTPS.
+- `https://www.falloutday.online/` is configured as a production URL.
+- `robots.txt` and `sitemap.xml` are live; sitemap contains 18 URLs.
+- Google Search Console verification meta tag is present on the homepage; owner confirmed property verification and sitemap submission.
+- Plausible is active using the owner-provided privacy-friendly analytics script.
+- EffectiveCPM runs only after the FAQ on `/fo76-guides/first-50-levels/`, with a visible `Sponsored placement` label.
 
-## Active work
-- [x] Existing live-domain and hosting preflight
-- [x] Project control board / DAG / Kanban created
-- [ ] Search-intent, competitor, and content-opportunity research (in progress)
-- [ ] PRD / route contract
-- [ ] IP, privacy, disclosure, and advertising plan
+## Completed work
 
-## Hard blockers
-- **SOURCE_REPO_REQUIRED:** Existing production source was not discovered locally. Do not overwrite the unrelated Vercel site until the original repository is identified and audited, or the owner explicitly authorizes a new clean replacement baseline.
-- **OWNER_RELEASE_APPROVAL_REQUIRED:** No production DNS, Vercel project, or domain assignment change is authorized by the current information.
+- [x] New GitHub repository created and deployed via Vercel.
+- [x] Previous unrelated live template replaced with FalloutDay.
+- [x] Deep-link / 404 routing fixed.
+- [x] Core security headers, canonical metadata, social metadata, static crawlable pages, JSON-LD, robots, and sitemap added.
+- [x] 12 original static guide pages created across Builds and Guides hubs.
+- [x] About, Privacy, Terms, independent fan disclaimer, Plausible disclosure, and EffectiveCPM disclosure added.
+- [x] EffectiveCPM single-placement trial implemented with test coverage.
+- [x] Google Search Console verification tag deployed; owner submitted sitemap.
+- [x] Weekly 8-run non-mutating site-health monitor created (`37c106bca31c`).
 
-## Learner-only actions
-- Provide the existing GitHub repository URL **or** explicitly authorize a new replacement repository/baseline.
-- Later, explicitly approve production replacement only after preview + QA.
-- Do not send passwords, DNS tokens, login cookies, or verification codes in chat.
+## Deferred by owner
 
-## Automation work that continues
-- Market/keyword research, PRD, content architecture, non-infringing editorial policy, and ad-readiness plan.
+- [ ] Public `contact@falloutday.online` / email routing.
+- [ ] Contact, corrections, and copyright-report page.
+- [ ] Any expansion of advertising beyond the current one-placement trial.
+- [ ] New content should be selected after real Search Console / Plausible data appears.
+
+## Resume rule
+
+When asked to resume, first read `PROJECT_HANDOFF.md`, check the current production routes, inspect any Search Console/Plausible/ad data available to the current session, and then act only on the selected next backlog item. Do not re-enable, expand, or move advertisements without a fresh safety/UX review.
