@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  color: #f4ecd7;
+  background: #1a1914;
+  font-family: Manrope, Arial, sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #1a1914; }
+a { color: inherit; text-decoration: none; }
+
+main { overflow: hidden; }
+.nav {
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 236, 215, .18);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 23px 30px;
+}
+.brand { font-family: Fraunces, serif; font-size: 25px; font-weight: 700; letter-spacing: -.06em; }
+.brand span { color: #e87945; }
+.nav-links { display: flex; gap: 26px; font-size: 13px; font-weight: 600; }
+.nav-links a { color: #d4c9ae; }
+.nav-links a:hover { color: #fff5df; }
+.hero {
+  background: radial-gradient(circle at 78% 28%, rgba(192, 74, 36, .35), transparent 32%), linear-gradient(125deg, #202019 0%, #322319 60%, #1d1d16 100%);
+  border-bottom: 1px solid rgba(244, 236, 215, .14);
+  min-height: 560px;
+  padding: 110px max(30px, calc((100vw - 1120px) / 2));
+  position: relative;
+}
+.hero::after { background: repeating-linear-gradient(135deg, transparent 0 18px, rgba(255,255,255,.018) 18px 19px); content: ''; inset: 0; pointer-events: none; position: absolute; }
+.hero > * { position: relative; z-index: 1; }
+.kicker { color: #ef9a70; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: .13em; margin: 0 0 20px; text-transform: uppercase; }
+h1, h2, h3 { font-family: Fraunces, Georgia, serif; letter-spacing: -.045em; }
+h1 { font-size: clamp(53px, 8vw, 100px); line-height: .94; margin: 0; max-width: 810px; }
+h1 em { color: #e87945; font-style: normal; }
+.lede { color: #d5cbb7; font-size: 18px; line-height: 1.65; margin: 30px 0; max-width: 600px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button { border: 1px solid #d8c39c; display: inline-block; font-size: 13px; font-weight: 700; padding: 14px 19px; }
+.primary { background: #e87945; border-color: #e87945; color: #211a16; }
+.secondary { color: #fff2da; }
+.button:hover { transform: translateY(-2px); }
+.guide-section { margin: 0 auto; max-width: 1180px; padding: 100px 30px; }
+.section-heading { display: flex; justify-content: space-between; margin-bottom: 36px; }
+h2 { font-size: clamp(33px, 5vw, 57px); line-height: 1; margin: 0; max-width: 650px; }
+.cards { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+.guide-card { background: #28271f; border: 1px solid rgba(244, 236, 215, .13); min-height: 300px; padding: 27px; position: relative; transition: background .2s, transform .2s; }
+.guide-card:hover { background: #333127; transform: translateY(-5px); }
+.card-number { color: #805b40; font-family: 'DM Mono', monospace; font-size: 13px; }
+.card-eyebrow { color: #e98759; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; margin: 55px 0 10px; text-transform: uppercase; }
+h3 { font-size: 29px; line-height: 1.04; margin: 0 0 13px; }
+.guide-card p:not(.card-eyebrow) { color: #cfc5ae; font-size: 14px; line-height: 1.65; }
+.read-link { bottom: 25px; color: #f2d3b7; font-family: 'DM Mono', monospace; font-size: 11px; position: absolute; }
+.principles { background: #d4c6a7; color: #231e18; padding: 94px max(30px, calc((100vw - 1120px) / 2)); }
+.principles .kicker { color: #8b442b; }
+.principles ul { border-top: 1px solid rgba(35,30,24,.3); list-style: none; margin: 48px 0 0; max-width: 900px; padding: 0; }
+.principles li { border-bottom: 1px solid rgba(35,30,24,.3); font-size: 17px; line-height: 1.55; padding: 21px 0; }
+footer { color: #b5a98e; display: flex; font-size: 12px; gap: 40px; justify-content: space-between; line-height: 1.6; margin: 0 auto; max-width: 1180px; padding: 35px 30px; }
+footer p { margin: 0; max-width: 760px; } footer a { color: #f2d3b7; text-decoration: underline; white-space: nowrap; }
+@media (max-width: 720px) { .nav { padding: 19px 20px; } .nav-links { gap: 14px; } .hero { min-height: 500px; padding: 78px 25px; } .cards { grid-template-columns: 1fr; } .guide-section { padding: 74px 20px; } .section-heading { display: block; } .section-heading .kicker { margin-bottom: 12px; } .principles { padding: 72px 25px; } footer { flex-direction: column; gap: 18px; padding: 28px 20px; } }
